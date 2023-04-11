@@ -1,6 +1,8 @@
 FROM openjdk:11
 LABEL author="adithya"
-#saving the jar file in root folder with name "spring-petclinic.jar"
+#saving the jar file in root folder with name "spring-petclinic.jar" because by default any cont is run by root. 
 ADD https://referenceapplicationskhaja.s3.us-west-2.amazonaws.com/spring-petclinic-2.4.2.jar /spring-petclinic.jar
 EXPOSE 8080
 CMD ["java", "-jar", "/spring-petclinic.jar"]
+
+# use USER adithya --> if you want adithya user to run all these commands
